@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src="js/three.min.js"></script>
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="js/dat.gui.min.js"></script>
+	<script type="text/javascript" src="js/TweenMax.min.js"></script>
+	<script type="text/javascript" src="js/OrbitControls.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/plugins/ModifiersPlugin.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+<div id="app" class="app-background"></div>
+
+<div class="sections">
+	<div class="section" data-img="img/bg1.jpg"></div>
+	<div class="section" data-img="img/bg2.jpg"></div>
+	<div class="section" data-img="img/bg3.jpg"></div>
+	<div class="section" data-img="img/bg4.jpg"></div>
+	<div class="section" data-img="img/bg5.jpg"></div>
+	<div class="section" data-img="img/bg6.jpg"></div>
+</div>
+
+<div class="cursor">
+	<div class="cursor__inner cursor__inner--circle"></div>
+	<div class="cursor__inner cursor__inner--dot"></div>
+</div>
+<svg></svg>
+
+<style type="text/css">
+	body{
+		overflow: hidden;
+	}
+	#app{
+		
+	}
+	canvas{
+		position: fixed;
+		top:0;
+		left: 0;
+	}
+	.cursor__inner {
+	  z-index: 9999;
+	  pointer-events: none;
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  mix-blend-mode: difference;
+	  border-radius: 50%;
+	}
+
+	.cursor__inner--dot {
+	  width: 8px;
+	  height: 8px;
+	  background: #fff;
+	}
+
+	.cursor__inner--circle {
+	  width: 40px;
+	  height: 40px;
+	  border: 1px solid #fff;
+	}
+</style>
+<script type="text/javascript" src="js/script.js"></script>	
+</body>
+</html>
